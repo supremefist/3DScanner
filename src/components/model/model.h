@@ -1,0 +1,3 @@
+/*
+Class representing final output model
+*/
