@@ -1,0 +1,3 @@
+// the configured options and settings for 3DScanner
+#define SCANNER_VERSION_MAJOR @Scanner_VERSION_MAJOR@
+#define SCANNER_VERSION_MINOR @Scanner_VERSION_MINOR@
