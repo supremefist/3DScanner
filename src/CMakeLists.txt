@@ -26,7 +26,13 @@ configure_file (
 # add the binary tree to the search path for include files
 # so that we will find TutorialConfig.h
 include_directories("${PROJECT_BINARY_DIR}")
- 
+
+# add frame_viewer library
+add_library(3dScanner 
+	utils/frame_viewer/frame_viewer.cpp
+	utils/frame_viewer/frame_viewer.h
+)
+
 # add the executable
 add_executable(scan_to_model ${PROJECT_SOURCE_DIR}/utils/scan_to_model/scan_to_model.cpp)
 target_link_libraries (scan_to_model ${PCL_LIBRARIES})
