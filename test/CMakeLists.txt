@@ -28,10 +28,10 @@ add_executable(test_all
 )
 
 # add test_render executable
-add_executable(test_render
+add_executable(test_rendering
   ${PROJECT_SOURCE_DIR}/test_all.cpp
   ${PROJECT_SOURCE_DIR}/test_render/test_render.cpp
 )
 
 target_link_libraries (test_all ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY} ${PCL_LIBRARIES} 3dScanner)
-target_link_libraries (test_render ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY} ${PCL_LIBRARIES} 3dScanner)
+target_link_libraries (test_rendering ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY} ${PCL_LIBRARIES} 3dScanner)
