@@ -1,13 +1,12 @@
 cmake_minimum_required (VERSION 2.6)
 project (3DScanner)
 
-set (EXECUTABLE_OUTPUT_PATH ..\bin)
+set (EXECUTABLE_OUTPUT_PATH ../bin)
 
 message(${PROJECT_SOURCE_DIR})
 
 # Locate packages
-find_package(PCL 1.2 REQUIRED)
-
+find_package(PCL 1.6 REQUIRED)
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
@@ -36,7 +35,8 @@ add_library(3dScanner
 	components/frame/frame.cpp
 	components/frame/frame.h
 )
+target_link_libraries (3dScanner ${PCL_LIBRARIES})
 
 # add the executable
 add_executable(scan_to_model ${PROJECT_SOURCE_DIR}/utils/scan_to_model/scan_to_model.cpp)
-target_link_libraries (scan_to_model ${PCL_LIBRARIES})
+target_link_libraries (scan_to_model 3dScanner)
