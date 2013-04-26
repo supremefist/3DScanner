@@ -33,6 +33,8 @@ include_directories("${PROJECT_BINARY_DIR}")
 add_library(3dScanner 
 	utils/frame_viewer/frame_viewer.cpp
 	utils/frame_viewer/frame_viewer.h
+	components/frame/frame.cpp
+	components/frame/frame.h
 )
 
 # add the executable
