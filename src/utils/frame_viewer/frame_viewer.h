@@ -5,7 +5,7 @@ namespace scanner {
 class FrameViewer {
 
 public:
-  void renderPCD(std::string pcd_filename);
+  void renderFrameFromFile(std::string filename);
 };
 
 }

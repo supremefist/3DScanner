@@ -4,9 +4,9 @@
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
 
-BOOST_AUTO_TEST_SUITE( test_frame )
+BOOST_AUTO_TEST_SUITE( testFrame )
 
-BOOST_AUTO_TEST_CASE( test_make_frame_from_basic_cloud ) {
+BOOST_AUTO_TEST_CASE( testMakeFrameFromBasicCloud ) {
 
   // Generate sample point cloud
   pcl::PointCloud<pcl::PointXYZ> cloud;

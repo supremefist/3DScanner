@@ -1,13 +1,13 @@
 #include <boost/test/unit_test.hpp> 
 #include <utils/frame_viewer/frame_viewer.h>
 
-BOOST_AUTO_TEST_SUITE (test_render)
+BOOST_AUTO_TEST_SUITE (testRender)
 
-BOOST_AUTO_TEST_CASE( test_simple_render ) {
+BOOST_AUTO_TEST_CASE( testSimpleRender ) {
   scanner::FrameViewer fr;
 
 
-  fr.renderPCD("../data/test_data/random.pcd");
+  fr.renderFrameFromFile("../data/test_data/random.pcd");
 
 }
 

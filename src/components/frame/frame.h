@@ -5,13 +5,12 @@ Class Frame that holds all relevant info and data for a registration frame
 #ifndef FRAME_H
 #define FRAME_H
 
-#include <pcl/point_cloud.h>
-#include <pcl/point_types.h>
+#include "frame_types.h"
+
+namespace scanner {
 
 class Frame
 {
-	typedef pcl::PointCloud<pcl::PointXYZ> Cloud;
-	typedef Cloud::Ptr CloudPtr;
 
 public:
 	//members
@@ -21,7 +20,13 @@ public:
 	Frame();
 	Frame(CloudPtr);
 
+	CloudPtr getCloudPtr();
+
 	//functions
+	static Frame *loadFromFilename(std::string filename);
+
 };
+
+}
 
 #endif // FRAME_H
