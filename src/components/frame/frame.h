@@ -13,17 +13,19 @@ class Frame
 {
 
 public:
-	//members
-	CloudPtr _cloud;
-
 	//constructors
 	Frame();
 	Frame(CloudPtr);
 
-	CloudPtr getCloudPtr();
+	CloudConstPtr getCloudPtr();
 
 	//functions
 	static Frame *loadFromFilename(std::string filename);
+
+private:
+	//members
+	CloudPtr _cloud;
+
 
 };
 

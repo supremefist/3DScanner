@@ -5,7 +5,7 @@ namespace scanner {
 class FrameViewer {
 
 public:
-  void renderFrameFromFile(std::string filename);
+  void renderFrameFromFile(std::string filename, bool preview=false);
 };
 
 }

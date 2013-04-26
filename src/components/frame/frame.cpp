@@ -24,8 +24,8 @@ Frame* Frame::loadFromFilename(std::string filename) {
 	return new Frame(cloud);
 }
 
-CloudPtr Frame::getCloudPtr() {
-	return _cloud;
+CloudConstPtr Frame::getCloudPtr() {
+	return (CloudConstPtr)_cloud;
 }
 
 }

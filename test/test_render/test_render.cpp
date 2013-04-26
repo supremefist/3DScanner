@@ -7,7 +7,7 @@ BOOST_AUTO_TEST_CASE( testSimpleRender ) {
   scanner::FrameViewer fr;
 
 
-  fr.renderFrameFromFile("../data/test_data/random.pcd");
+  fr.renderFrameFromFile("../data/test_data/ism_test_lioness.pcd");
 
 }
 
