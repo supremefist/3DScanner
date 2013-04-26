@@ -1,6 +1,8 @@
 cmake_minimum_required (VERSION 2.6)
 project (3DScanner)
 
+set (EXECUTABLE_OUTPUT_PATH ..\bin)
+
 message(${PROJECT_SOURCE_DIR})
 
 # Locate packages
