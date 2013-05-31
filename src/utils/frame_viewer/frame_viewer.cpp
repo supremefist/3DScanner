@@ -16,8 +16,7 @@ void FrameViewer::renderFrameFromFile(std::string filename, bool preview) {
 	if (preview) {
 		while (!viewer.wasStopped()) {
 		}
-	}
-	else {
+	} else {
 		std::cout << "Starting..." << std::endl;
 		if (viewer.wasStopped(2000)) {
 			std::cout << "Waiting..." << std::endl;
@@ -26,5 +25,16 @@ void FrameViewer::renderFrameFromFile(std::string filename, bool preview) {
 	}
 }
 
+}
+
+int main(int argc, char *argv[]) {
+	if (argc < 2) {
+		std::cout << "Please provide filename of point cloud to render."
+				<< std::endl;
+		return 0;
+	}
+
+	scanner::FrameViewer viewer;
+	viewer.renderFrameFromFile(argv[1], true);
 }
 

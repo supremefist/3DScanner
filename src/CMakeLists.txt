@@ -37,6 +37,15 @@ add_library(3dScanner
 )
 target_link_libraries (3dScanner ${PCL_LIBRARIES})
 
-# add the executable
+# add the executables
 add_executable(scan_to_model ${PROJECT_SOURCE_DIR}/utils/scan_to_model/scan_to_model.cpp)
 target_link_libraries (scan_to_model 3dScanner)
+
+add_executable(register_clouds ${PROJECT_SOURCE_DIR}/utils/register_clouds/register_clouds.cpp)
+target_link_libraries (register_clouds 3dScanner)
+
+add_executable(registration_demo ${PROJECT_SOURCE_DIR}/utils/registration_demo/registration_demo.cpp)
+target_link_libraries (registration_demo 3dScanner)
+
+add_executable(frame_viewer ${PROJECT_SOURCE_DIR}/utils/frame_viewer/frame_viewer.cpp)
+target_link_libraries (frame_viewer 3dScanner)

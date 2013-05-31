@@ -3,9 +3,11 @@
 
 #include <pcl/point_types.h>
 
-typedef pcl::PointCloud<pcl::PointXYZ> Cloud;
-typedef pcl::PointCloud<pcl::PointXYZ>::Ptr CloudPtr;
-typedef pcl::PointCloud<pcl::PointXYZ>::ConstPtr CloudConstPtr;
-
+typedef pcl::PointXYZ PointT;
+typedef pcl::PointNormal PointNormalT;
+typedef pcl::PointCloud<PointT> Cloud;
+typedef pcl::PointCloud<PointT>::Ptr CloudPtr;
+typedef pcl::PointCloud<PointT>::ConstPtr CloudConstPtr;
+typedef pcl::PointCloud<PointNormalT> CloudWithNormals;
 
 #endif // FRAME_H

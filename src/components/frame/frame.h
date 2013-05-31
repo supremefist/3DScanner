@@ -17,8 +17,10 @@ public:
 	Frame();
 	Frame(CloudPtr);
 
-	CloudConstPtr getCloudPtr();
+	CloudPtr getCloudPtr();
+	void filter();
 
+	void writePCD(std::string filename);
 	//functions
 	static Frame *loadFromFilename(std::string filename);
 
